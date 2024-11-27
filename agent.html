@@ -1,12 +1,12 @@
 <html>
-<h1>Chaitu</h1>
+<h1>Test Embedded Messaging</h1>
 <body>
 <script type='text/javascript'>
-	console.log("check script execution")
+	console.log("Script execution starts");
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
- 			console.log("inside try")
+			console.log("Initializing Embedded Messaging...");
+			embeddedservice_bootstrap.settings.language = 'en_US';
 			embeddedservice_bootstrap.init(
 				'00DKd000006PXKd',
 				'Streamlitapp',
@@ -16,11 +16,12 @@
 				}
 			);
 		} catch (err) {
-			console.log("error")
-			console.error('Error loading Embedded Messaging: ', err);
+			console.error('Error initializing Embedded Messaging:', err);
 		}
 	};
 </script>
-<script type='text/javascript' src='https://ne1731472210030.my.site.com/ESWStreamlitapp1732685650067/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' 
+	src='https://ne1731472210030.my.site.com/ESWStreamlitapp1732685650067/assets/js/bootstrap.min.js'
+	onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
